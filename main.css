@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url(fonts/ms_sans_serif.woff) format("woff");
+    src: url(fonts/ms_sans_serif.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal
+}
+
+* {
+    cursor: url(cursor.cur),auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin-top: 50px;
+    font-family: cursive;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    height: 500px;
+}
+
+.side-column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ranger {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.form {
+    padding: 100px 0 0 25px;
+    font-family: 'Microsoft Sans Serif';
+}
+
+.form-img {
+    background-image: url("img/form.png");
+    min-height: 588px;
+    max-width: 741px;
+}
+
+
+button, input, label, textarea {
+    font-family: "Pixelated MS Sans Serif",Arial;
+    -webkit-font-smoothing: none;
+    font-size: 11px;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+}
+
+.field-row > * + * {
+    margin-left: 6px;
+}
+
+.field-row-stacked {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    line-height: 2;
+    height: 21px;
+    padding: 3px 4px;
+    box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+}
+
+textarea {
+    padding: 3px 4px;
+    box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+    background-color: #fff;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border: none;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    border: none;
+}
+
+button {
+    background: silver;
+    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+    min-width: 75px;
+    min-height: 23px;
+    padding: 0 12px;
+}
+
+button:active {
+    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+    padding: 2px 11px 0 13px;
+}
+
+button:focus {
+    outline: 1px dotted #000;
+    outline-offset: -4px;
+}
