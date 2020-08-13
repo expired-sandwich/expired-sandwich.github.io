@@ -49,5 +49,5 @@ function saveMessage(name, message){
 messagesRef.on("child_added", function(data, prevChildKey) {
   var newData = data.val();
   console.log("name: " + newData.name);
-  document.getElementById('test').value += newData.name + '\r\n';
+  document.getElementById('messageBoard').value += newData.message + '\r\n\t-' + newData.name + '\r\n\r\n';
 });

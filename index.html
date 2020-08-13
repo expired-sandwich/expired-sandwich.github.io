@@ -17,15 +17,12 @@
         <img src="img/line.gif" width="600" height="1">
     </p>
 
-    <!--<marquee id="text" behavior="alternate" align="center" style="color:white;">
-        Have you seen the beautiful
-        sailboats off the waters of New York City?&nbsp;
-        <img id="myImg" src="img/boats.jpg" alt="boats" style="width:100%;max-width:300px;display:none;">
-
-    </marquee>-->
+    <marquee id="text" behavior="alternate" align="center" style="color:white;">
+        Have you seen the beautiful sailboats off the waters of New York City?&nbsp;
+    </marquee>
 
     <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" style="overflow: hidden;">
 
         <!-- The Close Button -->
         <span class="close">&times;</span>
@@ -39,7 +36,40 @@
 
     <br /><br />
 
-    <!--<table width="710" height="233" align="center" background="img/border.png">
+    <div class="row">
+        <div class="side-column">
+            <img class="center" src="img/blueranger.png" alt="Blue Ranger" style="width:50%; margin-top: 20%">
+        </div>
+        <div class="column">
+            <div class="form form-img">
+                <form id="contactForm">
+                    <div class="field-row">
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" size="50" required>
+                    </div>
+                    <br>
+                    <div class="field-row-stacked">
+                        <label for="message">What's on your mind?</label>
+                        <textarea rows="18" name="message" id="message" required></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="side-column">
+            <img class="center" src="img/redranger.png" alt="Red Ranger" style="width:50%; margin-top: 20%">
+        </div>
+    </div>
+
+    <div style="padding: 100px">
+        <img class="center" src="img/message.gif" style="width: 50%;">
+        <textarea class="messageBoard" rows="18" id="messageBoard"></textarea>
+    </div>
+
+    <table width="710" height="233" align="center" background="img/border.png">
         <tr>
             <td>
                 <marquee>
@@ -47,37 +77,7 @@
                 </marquee>
             </td>
         </tr>
-    </table>-->
-
-    <div class="row">
-        <div class="side-column">
-            <img class="center" src="img/blueranger.png" alt="Blue Ranger" style="width:50%; margin-top: 30%">
-        </div>
-        <div class="column form-img">
-            <div class="form">
-                <form id="contactForm">
-                    <div class="field-row">
-                        <label for="name">Name: </label>
-                        <input type="text" id="name" name="name" size="50">
-                    </div>
-                    <br>
-                    <div class="field-row-stacked">
-                        <label for="message">What's on your mind?</label>
-                        <textarea rows="3" name="message" id="message" style="width:690px; height:250px"></textarea>
-                    </div>
-                    <br>
-                    <div class="button-position">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="side-column">
-            <img class="center" src="img/redranger.png" alt="Red Ranger" style="width:50%; margin-top: 30%">
-        </div>
-    </div>
-
-
+    </table>
 
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
