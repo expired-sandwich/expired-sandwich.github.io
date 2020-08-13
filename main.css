@@ -152,12 +152,6 @@ body {
     display: table;
 }
 
-.ranger {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
 .form {
     padding: 100px 0 0 25px;
     font-family: 'Microsoft Sans Serif';
