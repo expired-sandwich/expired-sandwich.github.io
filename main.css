@@ -221,7 +221,7 @@ textarea {
 }
 
 input:focus, textarea:focus {
-    border: none;
+    outline: none;
 }
 
 button {

@@ -45,3 +45,9 @@ function saveMessage(name, message){
     message:message
   });
 }
+
+messagesRef.on("child_added", function(data, prevChildKey) {
+  var newData = data.val();
+  console.log("name: " + newData.name);
+  document.getElementById('test').value += newData.name + '\r\n';
+});
