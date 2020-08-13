@@ -244,3 +244,8 @@ button:focus {
     outline: 1px dotted #000;
     outline-offset: -4px;
 }
+
+.button-position {
+    margin-left: 615px;
+    margin-top: 12px;
+}
