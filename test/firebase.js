@@ -46,5 +46,5 @@ function signUpWithEmailPassword() {
     // [END auth_signin_password]
   }
 
-const signInn = document.getElementById('signIn');
-signIn.addEventListener('click', signInWithEmailPassword)
+const signIn = document.getElementById('signIn');
+signIn.addEventListener('click', signUpWithEmailPassword)
